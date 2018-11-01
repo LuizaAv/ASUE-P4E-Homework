@@ -31,7 +31,4 @@
 * Push your commits to your Github repo
 * Copy the URL of your Github repo and send it to me
 * Smile :)
-C
-C
-C
-* Smile 
+
