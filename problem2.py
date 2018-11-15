@@ -9,5 +9,4 @@ for x in range(2, number+1):
 
     if isPrime:
         print(x)
-        def write_in_the_same_range(x):
-            print(2, end= ' ')
+      
