@@ -1,38 +1,41 @@
-## Problem 1: Odd or even? That is the question
+## Problem 1: The maximum difference
 
-Ask the user for a number. Depending on whether the number is even or odd, print out an appropriate message to the user.
+Get a list of integers from the user. Calculate and print difference between the largest and the smallest integers of the list. **Do not use max and min built-in functions**
+
+*Sample input-output*
+
+|    Input         |  Output        |
+|:----------------:|:---------------|
+| 1 5 6 7 4 11     | 10             |
+| 4 -42 11 6 13    | 55             |
+| 12               | 0              | 
+
+**Hints:**
+
+* Use the split() method to split the string by the space character (' ') and to get a list of strings. Then use the map() function to make a map of integers out of a list of strings. And finally use the list() function to make a list out of a map object. 
+```python
+list_of_nums = list(map(int, input('Enter integers separated by spaces: ').split()))
+```
+
+## Problem 2: Primes, primes and primes
+
+Write a function which returns the list of all prime numbers less than or equal to a given number. Ask a positive integer from the user, get all the primes up to the given number using the written function and print them out on one line separated by spaces.
+
+*Sample input-output*
+
+|  Input  |  Output             |
+|:------- |:--------------------|
+| 10      | 2 3 5 7             |
+| 20      | 2 3 5 7 11 13 17 19 |
+| 2       | 2                   |
 
 **Hints:**
 
-* Use input() function to ask for an input from the user and use int() function to convert the returned string into an integer this way
+* Prime number is a number that is divisible only by itself and 1 (e.g. 2, 3, 5, 7, 11).
+
+* Use `end` keyword argument for printting numbers on one line
 ```python
-num = int(input("Enter an integer: "))
-```
-* You should probably use the modulus operator
-```python
->>> 5 % 2
-1
->>> 4 % 2
-0
-```
-
-## Problem 2: Guess the number 
-
-Generate a random number between 1 and 100 (including 1 and 100). Ask the user to guess the number, then tell him/her whether he/she guessed too low, too high, or exactly right. Keep the game going until the user types “exit” or guesses the right number․
-
-**Bonus:**
-
- Keep track of how many guesses the user has taken, and when the game ends, print that out.
-
-**Hints:**
-* Use random module to generate a random number
-```python
-import random
-num = random.randint(1, 100)
-```
-
-* Use `while` loop to keep the game going
-```python
-while guess != num:
-  ...
+print(2, end=' ')
+print(3, end=' ')
+print(5)
 ```
